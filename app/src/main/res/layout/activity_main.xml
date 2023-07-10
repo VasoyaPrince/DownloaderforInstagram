@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    android:tag="layout/activity_main_0"
+    android:weightSum="1.7">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/toolbar_background"
+            android:elevation="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/font"
+                android:text="Downloader for Instagram"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp" />
+
+
+        </RelativeLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rvInsta"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:elevation="@dimen/_2sdp"
+            android:translationZ="1dp"
+            ads:cardCornerRadius="@dimen/_8sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+
+                <ImageView
+                    android:id="@+id/reels"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/_8sdp"
+                    ads:srcCompat="@drawable/app_logo" />
+
+                <TextView
+                    android:id="@+id/txtMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reels"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/font"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@color/app_color_text"
+                    android:textSize="@dimen/_16ssp" />
+
+                <TextView
+                    android:id="@+id/txtMain2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtMain"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="You can download instagram post and reel by just pasting a link"
+                    android:textColor="#707070"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/txtMain2"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/_9sdp"
+                    ads:srcCompat="@drawable/ic_next_arrow" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mainlin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/rvGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="14dp"
+                    android:layout_marginBottom="8dp"
+                    android:translationZ="2dp"
+                    ads:cardCornerRadius="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/downloaded"
+                            android:layout_width="62dp"
+                            android:layout_height="62dp"
+                            android:layout_alignParentStart="false"
+                            android:layout_alignParentBottom="false"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginBottom="26dp"
+                            android:padding="10dp"
+                            ads:srcCompat="@drawable/ic_gallery" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="false"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="14dp"
+                            android:layout_toEndOf="@+id/downloaded"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/gallery_name"
+                            android:textColor="#2b2e4a"
+                            android:textSize="@dimen/_18ssp" />
+
+                        <ImageView
+                            android:id="@+id/next_arrow"
+                            android:layout_width="55dp"
+                            android:layout_height="62dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="26dp"
+                            android:layout_marginBottom="26dp"
+                            android:padding="15dp"
+                            ads:srcCompat="@drawable/ic_next_arrow" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <FrameLayout
+                    android:id="@+id/fl_native"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp" />
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:padding="@dimen/_15sdp"
+        android:translationZ="2dp"
+        ads:cardCornerRadius="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="3">
+
+
+            <RelativeLayout
+                android:id="@+id/rvShareApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/shareimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_invite" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shareimage"
+                    android:layout_alignParentBottom="false"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="@string/share_app_name"
+                    android:textColor="#2b2e4a"
+                    android:textSize="@dimen/_10ssp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rvPremiumPlan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgPremium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_remove_ad" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgPremium"
+                    android:layout_alignParentBottom="false"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="@string/remove_ad"
+                    android:textColor="#2b2e4a"
+                    android:textSize="@dimen/_10ssp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rvRateApp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/rateapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    ads:srcCompat="@drawable/ic_rate_app" />
+
+                <TextView
+                    android:id="@+id/textrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rateapp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:text="@string/rate_app_name"
+                    android:textColor="#2b2e4a"
+                    android:textSize="@dimen/_10ssp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        ads:layout_constraintBottom_toBottomOf="parent" />
+</RelativeLayout>
